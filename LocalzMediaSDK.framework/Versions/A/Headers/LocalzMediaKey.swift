@@ -46,4 +46,9 @@ import Foundation
         coder.encode(keyId, forKey: "keyId")
         coder.encode(uploadId, forKey: "uploadId")
     }
+    
+    @objc public override func isEqual(_ object: Any?) -> Bool {
+        guard let key = object as? LocalzMediaKey else { return false }
+        return resourceId == key.resourceId && keyId == key.keyId
+    }
 }

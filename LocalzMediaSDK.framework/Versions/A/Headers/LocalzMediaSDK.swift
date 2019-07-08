@@ -69,9 +69,9 @@ import Foundation
          - data: The data object to upload.
          - extensionType: The file type extension of the data being uploaded (e.g. png, mov, gif).
     */
-    @objc public func upload(data: Data, extensionType: String) {
+    @objc public func upload(data: Data, extensionType: String, onStart: ((LocalzMediaKey) -> Void)?=nil) {
         
-        media.upload(data: data, extensionType: extensionType)
+        return media.upload(data: data, extensionType: extensionType, onStart: onStart)
     }
     
     /**
@@ -88,9 +88,9 @@ import Foundation
          - data: The data object to upload.
          - extensionType: The file type extension of the data being uploaded (e.g. png, mov, gif).
      */
-    @objc public func uploadMultiPart(data: Data, extensionType: String) {
+    @objc public func uploadMultiPart(data: Data, extensionType: String, onStart: ((LocalzMediaKey) -> Void)?=nil) {
         
-        media.multiPartUpload(data: data, extensionType: extensionType)
+        return media.multiPartUpload(data: data, extensionType: extensionType, onStart: onStart)
     }
     
     /**

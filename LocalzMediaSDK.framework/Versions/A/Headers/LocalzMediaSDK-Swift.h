@@ -295,6 +295,7 @@ SWIFT_CLASS("_TtC14LocalzMediaSDK14LocalzMediaKey")
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)decoder OBJC_DESIGNATED_INITIALIZER;
 /// Keyed unarchiver support.
 - (void)encodeWithCoder:(NSCoder * _Nonnull)coder;
+- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -352,7 +353,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LocalzMediaS
 ///
 /// \param extensionType The file type extension of the data being uploaded (e.g. png, mov, gif).
 ///
-- (void)uploadWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType;
+- (void)uploadWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType onStart:(void (^ _Nullable)(LocalzMediaKey * _Nonnull))onStart;
 /// Begins a multi-part upload of data.
 /// This method will work when the app is in a suspended state.
 /// Status updates to the upload will be reported via the notification center names:
@@ -374,7 +375,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LocalzMediaS
 ///
 /// \param extensionType The file type extension of the data being uploaded (e.g. png, mov, gif).
 ///
-- (void)uploadMultiPartWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType;
+- (void)uploadMultiPartWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType onStart:(void (^ _Nullable)(LocalzMediaKey * _Nonnull))onStart;
 /// Begins a download of data using the key provided when
 /// This method will work when the app is in a suspended state.
 /// Status updates to the upload will be reported via the notification center names:
@@ -701,6 +702,7 @@ SWIFT_CLASS("_TtC14LocalzMediaSDK14LocalzMediaKey")
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)decoder OBJC_DESIGNATED_INITIALIZER;
 /// Keyed unarchiver support.
 - (void)encodeWithCoder:(NSCoder * _Nonnull)coder;
+- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -758,7 +760,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LocalzMediaS
 ///
 /// \param extensionType The file type extension of the data being uploaded (e.g. png, mov, gif).
 ///
-- (void)uploadWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType;
+- (void)uploadWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType onStart:(void (^ _Nullable)(LocalzMediaKey * _Nonnull))onStart;
 /// Begins a multi-part upload of data.
 /// This method will work when the app is in a suspended state.
 /// Status updates to the upload will be reported via the notification center names:
@@ -780,7 +782,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LocalzMediaS
 ///
 /// \param extensionType The file type extension of the data being uploaded (e.g. png, mov, gif).
 ///
-- (void)uploadMultiPartWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType;
+- (void)uploadMultiPartWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType onStart:(void (^ _Nullable)(LocalzMediaKey * _Nonnull))onStart;
 /// Begins a download of data using the key provided when
 /// This method will work when the app is in a suspended state.
 /// Status updates to the upload will be reported via the notification center names:
@@ -1112,6 +1114,7 @@ SWIFT_CLASS("_TtC14LocalzMediaSDK14LocalzMediaKey")
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)decoder OBJC_DESIGNATED_INITIALIZER;
 /// Keyed unarchiver support.
 - (void)encodeWithCoder:(NSCoder * _Nonnull)coder;
+- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1169,7 +1172,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LocalzMediaS
 ///
 /// \param extensionType The file type extension of the data being uploaded (e.g. png, mov, gif).
 ///
-- (void)uploadWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType;
+- (void)uploadWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType onStart:(void (^ _Nullable)(LocalzMediaKey * _Nonnull))onStart;
 /// Begins a multi-part upload of data.
 /// This method will work when the app is in a suspended state.
 /// Status updates to the upload will be reported via the notification center names:
@@ -1191,7 +1194,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LocalzMediaS
 ///
 /// \param extensionType The file type extension of the data being uploaded (e.g. png, mov, gif).
 ///
-- (void)uploadMultiPartWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType;
+- (void)uploadMultiPartWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType onStart:(void (^ _Nullable)(LocalzMediaKey * _Nonnull))onStart;
 /// Begins a download of data using the key provided when
 /// This method will work when the app is in a suspended state.
 /// Status updates to the upload will be reported via the notification center names:
@@ -1518,6 +1521,7 @@ SWIFT_CLASS("_TtC14LocalzMediaSDK14LocalzMediaKey")
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)decoder OBJC_DESIGNATED_INITIALIZER;
 /// Keyed unarchiver support.
 - (void)encodeWithCoder:(NSCoder * _Nonnull)coder;
+- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1575,7 +1579,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LocalzMediaS
 ///
 /// \param extensionType The file type extension of the data being uploaded (e.g. png, mov, gif).
 ///
-- (void)uploadWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType;
+- (void)uploadWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType onStart:(void (^ _Nullable)(LocalzMediaKey * _Nonnull))onStart;
 /// Begins a multi-part upload of data.
 /// This method will work when the app is in a suspended state.
 /// Status updates to the upload will be reported via the notification center names:
@@ -1597,7 +1601,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LocalzMediaS
 ///
 /// \param extensionType The file type extension of the data being uploaded (e.g. png, mov, gif).
 ///
-- (void)uploadMultiPartWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType;
+- (void)uploadMultiPartWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType onStart:(void (^ _Nullable)(LocalzMediaKey * _Nonnull))onStart;
 /// Begins a download of data using the key provided when
 /// This method will work when the app is in a suspended state.
 /// Status updates to the upload will be reported via the notification center names:
