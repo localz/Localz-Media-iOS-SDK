@@ -18,6 +18,8 @@ import Foundation
     @objc public var keyId: String
     /// Internally used unique multi-part upload identifier.
     @objc public var uploadId: String?
+    /// Used to denote if it is located in the private or public bucket
+    @objc public var isPublic: Bool
     
     // MARK: - Public Methods
     
@@ -27,10 +29,11 @@ import Foundation
      - Parameters:
         - data: The response object containing a `resourceId`, `keyId`, and optionally an `uploadId`.
     */
-    @objc public init(data: [String:Any]) {
+    @objc public init(data: [String:Any], isPublic: Bool = false) {
         resourceId = data["resourceId"] as! String
         keyId = data["keyId"] as! String
         uploadId = data["uploadId"] as? String
+        self.isPublic = isPublic
     }
     
     /// Keyed archiver support.
@@ -38,6 +41,7 @@ import Foundation
         resourceId = decoder.decodeObject(forKey: "resourceId") as! String
         keyId = decoder.decodeObject(forKey: "keyId") as! String
         uploadId = decoder.decodeObject(forKey: "uploadId") as? String
+        isPublic = decoder.decodeBool(forKey: "isPublic")
     }
     
     /// Keyed unarchiver support.
@@ -45,10 +49,11 @@ import Foundation
         coder.encode(resourceId, forKey: "resourceId")
         coder.encode(keyId, forKey: "keyId")
         coder.encode(uploadId, forKey: "uploadId")
+        coder.encode(isPublic, forKey: "isPublic")
     }
     
     @objc public override func isEqual(_ object: Any?) -> Bool {
         guard let key = object as? LocalzMediaKey else { return false }
-        return resourceId == key.resourceId && keyId == key.keyId
+        return resourceId == key.resourceId && keyId == key.keyId && self.isPublic == key.isPublic
     }
 }

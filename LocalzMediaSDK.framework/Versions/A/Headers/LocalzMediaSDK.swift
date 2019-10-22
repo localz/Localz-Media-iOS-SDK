@@ -68,10 +68,11 @@ import Foundation
      - Parameters:
          - data: The data object to upload.
          - extensionType: The file type extension of the data being uploaded (e.g. png, mov, gif).
+         - isPublic: make file publicily accessible
     */
-    @objc public func upload(data: Data, extensionType: String, onStart: ((LocalzMediaKey) -> Void)?=nil) {
+    @objc public func upload(data: Data, extensionType: String, isPublic: Bool = false, onStart: ((LocalzMediaKey) -> Void)?=nil) {
         
-        return media.upload(data: data, extensionType: extensionType, onStart: onStart)
+        return media.upload(data: data, extensionType: extensionType, isPublic: isPublic, onStart: onStart)
     }
     
     /**
@@ -107,7 +108,7 @@ import Foundation
          - key: The key of identifiers to perform and authenticate the download
      */
     @objc public func download(key: LocalzMediaKey) {
-        
+    
         media.download(key: key)
     }
     
@@ -122,5 +123,16 @@ import Foundation
     @objc public func setBackgroundCompletionHandler(completionHandler: (() -> Void)?) {
         
         media.setBackgroundCompletionHandler(completionHandler: completionHandler)
+    }
+    
+    /**
+     Get download URL for given media key
+     - Parameters:
+            - key: The key of identifiers to perform the action (and retrieve the correct image)
+            - completion: The completion handler
+     */
+    @objc public func getDownloadUrl(key: LocalzMediaKey, completion:((_ error: Error?, _ url: String?) -> Void)?) {
+        
+        media.getDownloadUrl(key: key, completion: completion)
     }
 }
