@@ -304,8 +304,14 @@ SWIFT_CLASS("_TtC14LocalzMediaSDK14LocalzMediaKey")
 @property (nonatomic, copy) NSString * _Nullable uploadId;
 /// Used to denote if it is located in the private or public bucket
 @property (nonatomic) BOOL isPublic;
+/// Initialise a new LocalzMediaKey with a random <code>resourceId</code> and <code>keyId</code>
+/// \param isPublic An optional value to denote whether the uploaded file will be publicly accessible.
+///
+- (nonnull instancetype)initWithIsPublic:(BOOL)isPublic OBJC_DESIGNATED_INITIALIZER;
 /// Initialise the LocalzMediaKey data response from the Localz API.
 /// \param data The response object containing a <code>resourceId</code>, <code>keyId</code>, and optionally an <code>uploadId</code>.
+///
+/// \param isPublic An optional value to denote whether the uploaded file will be publicly accessible.
 ///
 - (nonnull instancetype)initWithData:(NSDictionary<NSString *, id> * _Nonnull)data isPublic:(BOOL)isPublic OBJC_DESIGNATED_INITIALIZER;
 /// Keyed archiver support.
@@ -350,7 +356,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LocalzMediaS
 ///
 - (nonnull instancetype)initWithProjectId:(NSString * _Nonnull)projectId projectKey:(NSString * _Nonnull)projectKey attendantKey:(NSString * _Nonnull)attendantKey username:(NSString * _Nonnull)username password:(NSString * _Nonnull)password options:(NSDictionary<NSString *, id> * _Nullable)options completion:(void (^ _Nullable)(NSError * _Nullable))completion OBJC_DESIGNATED_INITIALIZER;
 /// Begins a single-part upload of data.
-/// This method will *<em>not</em> work when the app is in a suspended state.
+/// This method will <em>not</em> work when the app is in a suspended state.
 /// Status updates to the upload will be reported via the notification center names:
 /// <ul>
 ///   <li>
@@ -739,8 +745,14 @@ SWIFT_CLASS("_TtC14LocalzMediaSDK14LocalzMediaKey")
 @property (nonatomic, copy) NSString * _Nullable uploadId;
 /// Used to denote if it is located in the private or public bucket
 @property (nonatomic) BOOL isPublic;
+/// Initialise a new LocalzMediaKey with a random <code>resourceId</code> and <code>keyId</code>
+/// \param isPublic An optional value to denote whether the uploaded file will be publicly accessible.
+///
+- (nonnull instancetype)initWithIsPublic:(BOOL)isPublic OBJC_DESIGNATED_INITIALIZER;
 /// Initialise the LocalzMediaKey data response from the Localz API.
 /// \param data The response object containing a <code>resourceId</code>, <code>keyId</code>, and optionally an <code>uploadId</code>.
+///
+/// \param isPublic An optional value to denote whether the uploaded file will be publicly accessible.
 ///
 - (nonnull instancetype)initWithData:(NSDictionary<NSString *, id> * _Nonnull)data isPublic:(BOOL)isPublic OBJC_DESIGNATED_INITIALIZER;
 /// Keyed archiver support.
@@ -785,7 +797,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LocalzMediaS
 ///
 - (nonnull instancetype)initWithProjectId:(NSString * _Nonnull)projectId projectKey:(NSString * _Nonnull)projectKey attendantKey:(NSString * _Nonnull)attendantKey username:(NSString * _Nonnull)username password:(NSString * _Nonnull)password options:(NSDictionary<NSString *, id> * _Nullable)options completion:(void (^ _Nullable)(NSError * _Nullable))completion OBJC_DESIGNATED_INITIALIZER;
 /// Begins a single-part upload of data.
-/// This method will *<em>not</em> work when the app is in a suspended state.
+/// This method will <em>not</em> work when the app is in a suspended state.
 /// Status updates to the upload will be reported via the notification center names:
 /// <ul>
 ///   <li>
@@ -1179,8 +1191,14 @@ SWIFT_CLASS("_TtC14LocalzMediaSDK14LocalzMediaKey")
 @property (nonatomic, copy) NSString * _Nullable uploadId;
 /// Used to denote if it is located in the private or public bucket
 @property (nonatomic) BOOL isPublic;
+/// Initialise a new LocalzMediaKey with a random <code>resourceId</code> and <code>keyId</code>
+/// \param isPublic An optional value to denote whether the uploaded file will be publicly accessible.
+///
+- (nonnull instancetype)initWithIsPublic:(BOOL)isPublic OBJC_DESIGNATED_INITIALIZER;
 /// Initialise the LocalzMediaKey data response from the Localz API.
 /// \param data The response object containing a <code>resourceId</code>, <code>keyId</code>, and optionally an <code>uploadId</code>.
+///
+/// \param isPublic An optional value to denote whether the uploaded file will be publicly accessible.
 ///
 - (nonnull instancetype)initWithData:(NSDictionary<NSString *, id> * _Nonnull)data isPublic:(BOOL)isPublic OBJC_DESIGNATED_INITIALIZER;
 /// Keyed archiver support.
@@ -1225,7 +1243,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LocalzMediaS
 ///
 - (nonnull instancetype)initWithProjectId:(NSString * _Nonnull)projectId projectKey:(NSString * _Nonnull)projectKey attendantKey:(NSString * _Nonnull)attendantKey username:(NSString * _Nonnull)username password:(NSString * _Nonnull)password options:(NSDictionary<NSString *, id> * _Nullable)options completion:(void (^ _Nullable)(NSError * _Nullable))completion OBJC_DESIGNATED_INITIALIZER;
 /// Begins a single-part upload of data.
-/// This method will *<em>not</em> work when the app is in a suspended state.
+/// This method will <em>not</em> work when the app is in a suspended state.
 /// Status updates to the upload will be reported via the notification center names:
 /// <ul>
 ///   <li>
@@ -1614,8 +1632,14 @@ SWIFT_CLASS("_TtC14LocalzMediaSDK14LocalzMediaKey")
 @property (nonatomic, copy) NSString * _Nullable uploadId;
 /// Used to denote if it is located in the private or public bucket
 @property (nonatomic) BOOL isPublic;
+/// Initialise a new LocalzMediaKey with a random <code>resourceId</code> and <code>keyId</code>
+/// \param isPublic An optional value to denote whether the uploaded file will be publicly accessible.
+///
+- (nonnull instancetype)initWithIsPublic:(BOOL)isPublic OBJC_DESIGNATED_INITIALIZER;
 /// Initialise the LocalzMediaKey data response from the Localz API.
 /// \param data The response object containing a <code>resourceId</code>, <code>keyId</code>, and optionally an <code>uploadId</code>.
+///
+/// \param isPublic An optional value to denote whether the uploaded file will be publicly accessible.
 ///
 - (nonnull instancetype)initWithData:(NSDictionary<NSString *, id> * _Nonnull)data isPublic:(BOOL)isPublic OBJC_DESIGNATED_INITIALIZER;
 /// Keyed archiver support.
@@ -1660,7 +1684,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LocalzMediaS
 ///
 - (nonnull instancetype)initWithProjectId:(NSString * _Nonnull)projectId projectKey:(NSString * _Nonnull)projectKey attendantKey:(NSString * _Nonnull)attendantKey username:(NSString * _Nonnull)username password:(NSString * _Nonnull)password options:(NSDictionary<NSString *, id> * _Nullable)options completion:(void (^ _Nullable)(NSError * _Nullable))completion OBJC_DESIGNATED_INITIALIZER;
 /// Begins a single-part upload of data.
-/// This method will *<em>not</em> work when the app is in a suspended state.
+/// This method will <em>not</em> work when the app is in a suspended state.
 /// Status updates to the upload will be reported via the notification center names:
 /// <ul>
 ///   <li>

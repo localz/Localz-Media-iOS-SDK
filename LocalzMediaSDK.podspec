@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 	s.name	= 'LocalzMediaSDK'
 	s.summary = 'LocalzMediaSDK'
 
-	s.version = '1.1.1'
+	s.version = '1.2.2'
 	s.platform = :ios,'8.0'
 	s.ios.deployment_target = '8.0'
 
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 
 	s.requires_arc = true
 	s.static_framework = true
-	s.swift_version = '5.0'
+	s.swift_version = '5.1'
 	s.pod_target_xcconfig = {
 		'FRAMEWORK_SERCH_PATHS' => '$(inherited)',
 		'DEFINES_MODULE' => 'YES',

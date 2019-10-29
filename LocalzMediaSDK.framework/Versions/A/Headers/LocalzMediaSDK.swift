@@ -58,7 +58,7 @@ import Foundation
     /**
      Begins a single-part upload of data.
      
-     This method will **not* work when the app is in a suspended state.
+     This method will **not** work when the app is in a suspended state.
      Status updates to the upload will be reported via the notification center names:
      - OnStartNotification
      - OnProgressNotification
