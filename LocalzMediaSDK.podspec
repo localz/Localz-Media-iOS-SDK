@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 	s.name	= 'LocalzMediaSDK'
 	s.summary = 'LocalzMediaSDK'
 
-	s.version = '1.2.2'
+	s.version = '1.2.3'
 	s.platform = :ios,'8.0'
 	s.ios.deployment_target = '8.0'
 
