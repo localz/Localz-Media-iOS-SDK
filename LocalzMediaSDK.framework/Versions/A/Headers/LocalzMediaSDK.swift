@@ -70,9 +70,29 @@ import Foundation
          - extensionType: The file type extension of the data being uploaded (e.g. png, mov, gif).
          - isPublic: make file publicily accessible
     */
-    @objc public func upload(data: Data, extensionType: String, isPublic: Bool = false, onStart: ((LocalzMediaKey) -> Void)?=nil) {
+    @objc public func upload(data: Data, extensionType: String, isPublic: Bool=false, onStart: ((LocalzMediaKey) -> Void)?=nil) {
         
         return media.upload(data: data, extensionType: extensionType, isPublic: isPublic, onStart: onStart)
+    }
+    
+    /**
+     Begins a single-part upload of a file at a local URL.
+     
+     This method will **not** work when the app is in a suspended state.
+     Status updates to the upload will be reported via the notification center names:
+     - OnStartNotification
+     - OnProgressNotification
+     - OnSuccessNotification
+     - OnErrorNotification
+     
+     - Parameters:
+         - fileURL: The local URL of the file to upload.
+         - extensionType: The file type extension of the data being uploaded (e.g. png, mov, gif).
+         - isPublic: make file publicily accessible
+    */
+    @objc public func upload(fileURL: URL, extensionType: String, isPublic: Bool=false, onStart: ((LocalzMediaKey) -> Void)?=nil) {
+        
+        return media.upload(fileURL: fileURL, extensionType: extensionType, isPublic: isPublic, onStart: onStart)
     }
     
     /**

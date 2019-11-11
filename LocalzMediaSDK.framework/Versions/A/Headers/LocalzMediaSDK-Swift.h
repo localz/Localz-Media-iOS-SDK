@@ -379,6 +379,30 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LocalzMediaS
 /// \param isPublic make file publicily accessible
 ///
 - (void)uploadWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType isPublic:(BOOL)isPublic onStart:(void (^ _Nullable)(LocalzMediaKey * _Nonnull))onStart;
+/// Begins a single-part upload of a file at a local URL.
+/// This method will <em>not</em> work when the app is in a suspended state.
+/// Status updates to the upload will be reported via the notification center names:
+/// <ul>
+///   <li>
+///     OnStartNotification
+///   </li>
+///   <li>
+///     OnProgressNotification
+///   </li>
+///   <li>
+///     OnSuccessNotification
+///   </li>
+///   <li>
+///     OnErrorNotification
+///   </li>
+/// </ul>
+/// \param fileURL The local URL of the file to upload.
+///
+/// \param extensionType The file type extension of the data being uploaded (e.g. png, mov, gif).
+///
+/// \param isPublic make file publicily accessible
+///
+- (void)uploadWithFileURL:(NSURL * _Nonnull)fileURL extensionType:(NSString * _Nonnull)extensionType isPublic:(BOOL)isPublic onStart:(void (^ _Nullable)(LocalzMediaKey * _Nonnull))onStart;
 /// Begins a multi-part upload of data.
 /// This method will work when the app is in a suspended state.
 /// Status updates to the upload will be reported via the notification center names:
@@ -820,6 +844,30 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LocalzMediaS
 /// \param isPublic make file publicily accessible
 ///
 - (void)uploadWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType isPublic:(BOOL)isPublic onStart:(void (^ _Nullable)(LocalzMediaKey * _Nonnull))onStart;
+/// Begins a single-part upload of a file at a local URL.
+/// This method will <em>not</em> work when the app is in a suspended state.
+/// Status updates to the upload will be reported via the notification center names:
+/// <ul>
+///   <li>
+///     OnStartNotification
+///   </li>
+///   <li>
+///     OnProgressNotification
+///   </li>
+///   <li>
+///     OnSuccessNotification
+///   </li>
+///   <li>
+///     OnErrorNotification
+///   </li>
+/// </ul>
+/// \param fileURL The local URL of the file to upload.
+///
+/// \param extensionType The file type extension of the data being uploaded (e.g. png, mov, gif).
+///
+/// \param isPublic make file publicily accessible
+///
+- (void)uploadWithFileURL:(NSURL * _Nonnull)fileURL extensionType:(NSString * _Nonnull)extensionType isPublic:(BOOL)isPublic onStart:(void (^ _Nullable)(LocalzMediaKey * _Nonnull))onStart;
 /// Begins a multi-part upload of data.
 /// This method will work when the app is in a suspended state.
 /// Status updates to the upload will be reported via the notification center names:
@@ -1266,6 +1314,30 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LocalzMediaS
 /// \param isPublic make file publicily accessible
 ///
 - (void)uploadWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType isPublic:(BOOL)isPublic onStart:(void (^ _Nullable)(LocalzMediaKey * _Nonnull))onStart;
+/// Begins a single-part upload of a file at a local URL.
+/// This method will <em>not</em> work when the app is in a suspended state.
+/// Status updates to the upload will be reported via the notification center names:
+/// <ul>
+///   <li>
+///     OnStartNotification
+///   </li>
+///   <li>
+///     OnProgressNotification
+///   </li>
+///   <li>
+///     OnSuccessNotification
+///   </li>
+///   <li>
+///     OnErrorNotification
+///   </li>
+/// </ul>
+/// \param fileURL The local URL of the file to upload.
+///
+/// \param extensionType The file type extension of the data being uploaded (e.g. png, mov, gif).
+///
+/// \param isPublic make file publicily accessible
+///
+- (void)uploadWithFileURL:(NSURL * _Nonnull)fileURL extensionType:(NSString * _Nonnull)extensionType isPublic:(BOOL)isPublic onStart:(void (^ _Nullable)(LocalzMediaKey * _Nonnull))onStart;
 /// Begins a multi-part upload of data.
 /// This method will work when the app is in a suspended state.
 /// Status updates to the upload will be reported via the notification center names:
@@ -1707,6 +1779,30 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LocalzMediaS
 /// \param isPublic make file publicily accessible
 ///
 - (void)uploadWithData:(NSData * _Nonnull)data extensionType:(NSString * _Nonnull)extensionType isPublic:(BOOL)isPublic onStart:(void (^ _Nullable)(LocalzMediaKey * _Nonnull))onStart;
+/// Begins a single-part upload of a file at a local URL.
+/// This method will <em>not</em> work when the app is in a suspended state.
+/// Status updates to the upload will be reported via the notification center names:
+/// <ul>
+///   <li>
+///     OnStartNotification
+///   </li>
+///   <li>
+///     OnProgressNotification
+///   </li>
+///   <li>
+///     OnSuccessNotification
+///   </li>
+///   <li>
+///     OnErrorNotification
+///   </li>
+/// </ul>
+/// \param fileURL The local URL of the file to upload.
+///
+/// \param extensionType The file type extension of the data being uploaded (e.g. png, mov, gif).
+///
+/// \param isPublic make file publicily accessible
+///
+- (void)uploadWithFileURL:(NSURL * _Nonnull)fileURL extensionType:(NSString * _Nonnull)extensionType isPublic:(BOOL)isPublic onStart:(void (^ _Nullable)(LocalzMediaKey * _Nonnull))onStart;
 /// Begins a multi-part upload of data.
 /// This method will work when the app is in a suspended state.
 /// Status updates to the upload will be reported via the notification center names:
